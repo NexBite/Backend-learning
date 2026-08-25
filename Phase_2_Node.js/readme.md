@@ -490,3 +490,31 @@ Express
 Web framework running on Node.js
 
 We'll get to Express after you understand Node fundamentals.
+
+                 Node.js
+                    │
+             JavaScript code
+                    │
+                    ▼
+              ┌───────────┐
+              │Call Stack │
+              └─────┬─────┘
+                    │
+             asynchronous work
+                    │
+                    ▼
+              Node.js runtime
+                    │
+                    ▼
+             Event Loop
+                    │
+           ┌────────┴────────┐
+           ▼                 ▼
+     Callback Queue       Promises
+           │                 │
+           └────────┬────────┘
+                    ▼
+                Call Stack
+                    │
+                    ▼
+               Your code
